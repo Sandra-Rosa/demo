@@ -1,18 +1,20 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 int main(){
-    int i,n;
-    cout<<"Enter aa number";
+    int n;
+    bool flag=0;
+    cout<<"Enter a number ";
     cin>>n;
-    for(i=25
-    ;i<n;i++){
-        if(n%i==0){
-            cout<<n<<" is not a prime number";
-            break;
-        }
+    for(int i=2;i<=sqrt(n);i++){
+      if(n%i == 0){
+        cout<<"Non prime"<<endl;
+        flag=1;
+        break;
+      }
     }
-    if(n==i){
-        cout<<n<<" is a prime number";
+    if(flag==0){
+        cout<<"Prime";
     }
     return 0;
 }
